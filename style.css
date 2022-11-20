@@ -4,23 +4,23 @@
   box-sizing: border-box;
 }
 :root {
-  --card-color-bottom-line: #F7DD43; 
+  --card-color-bottom-line: #f7dd43;
   --card-color-h2-border: #746615;
-  --card-bg-color: #1D1C19;
-  --bg-img: url(./assets/bg.svg); 
+  --card-bg-color: #1d1c19;
+  --bg-img: url(./assets/bg.svg);
 }
 
 body.blue {
-  --card-color-bottom-line: #338af3; 
+  --card-color-bottom-line: #338af3;
   --card-color-h2-border: #6a87a9;
   --card-bg-color: #202024;
   --bg-img: url(./assets/bg=green.svg);
 }
 
 body.green {
-  --card-color-bottom-line: #047C3F; 
+  --card-color-bottom-line: #047c3f;
   --card-color-h2-border: #51866b;
-  --card-bg-color: #1A1F1B;
+  --card-bg-color: #1a1f1b;
   --bg-img: url(./assets/bg=green.svg);
 }
 
@@ -34,11 +34,10 @@ body {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 #app {
-  
   width: fit-content;
   margin: auto;
   padding-top: 52px;
@@ -51,7 +50,8 @@ header {
 
 #cards {
   display: flex;
-  gap: 32px;
+  column-gap: 40px;
+  row-gap: 32px;
   flex-direction: column;
 }
 
@@ -61,7 +61,7 @@ header {
   background: var(--card-bg-color);
   border-radius: 6px;
   border-bottom: 2px solid var(--card-color-bottom-line);
-  animation: appear .5s;
+  animation: appear 0.5s;
 }
 
 .card h2 {
@@ -86,7 +86,6 @@ header {
 .card ul {
   display: flex;
   flex-direction: column;
-  gap: 24px;
   width: 270px;
 }
 
@@ -98,13 +97,12 @@ header {
 
 .card ul li + li {
   padding-top: 24px;
-  border-top: 1px solid #323232 
+  border-top: 1px solid #323232;
 }
 
 .card ul li strong {
   font-weight: 900;
-  font-size: 36px;
-  line-height: 125%;
+  font-size: 28px;
   color: azure;
 }
 
@@ -117,6 +115,13 @@ header {
 .card ul li img {
   transition: transform 0.3s;
 }
+.card ul .group {
+  font-size: 16px;
+  color: grey;
+  display: block;
+  text-align: center;
+  padding-bottom: 24px;
+}
 
 @keyframes appear {
   0% {
@@ -128,9 +133,17 @@ header {
 }
 
 @media (min-width: 700px) {
- #cards {
-  max-width: 670px;
-  flex-direction: row;
-  flex-wrap: wrap;
- }
+  #cards {
+    max-width: 670px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+}
+
+@media (min-width: 1100px) {
+  #cards {
+    max-width: 1070px;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
