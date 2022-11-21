@@ -94,10 +94,8 @@ header {
   align-items: center;
   justify-content: space-between;
 }
-
-.card ul li + li {
-  padding-top: 24px;
-  border-top: 1px solid #323232;
+.card ul li.game {
+  padding-top: 10px;
 }
 
 .card ul li strong {
@@ -115,12 +113,20 @@ header {
 .card ul li img {
   transition: transform 0.3s;
 }
-.card ul .group {
+
+.card ul li.names {
   font-size: 16px;
   color: grey;
-  display: block;
+  padding-top: 5px;
+}
+
+.card ul li h1 {
+  font-size: 12px;
+  color: azure;
   text-align: center;
+  width: 270px;
   padding-bottom: 24px;
+  border-bottom: 1px solid #323232;
 }
 
 @keyframes appear {
